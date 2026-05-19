@@ -1,5 +1,4 @@
-const PORTRAIT =
-  "https://www.figma.com/api/mcp/asset/cfd1c845-b7c1-4328-bb85-ab68fe378554";
+const PORTRAIT = "/images/about-portrait.png";
 
 // Single L-shape SVG; rotation applied per corner
 function Corner({ rotate }: { rotate: 0 | 90 | 180 | -90 }) {

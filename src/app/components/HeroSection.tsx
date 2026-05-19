@@ -2,10 +2,8 @@
 
 import { useState } from "react";
 
-const DESKTOP_PHOTO =
-  "https://www.figma.com/api/mcp/asset/da942976-ab9f-4d6a-b794-43e2f44b9b35";
-const MOBILE_PHOTO =
-  "https://www.figma.com/api/mcp/asset/4b75e261-a285-4513-b097-21740c4540d7";
+const DESKTOP_PHOTO = "/images/hero-desktop.png";
+const MOBILE_PHOTO = "/images/hero-mobile.png";
 
 const NAV_LINKS = ["About", "Services", "Projects", "News", "Contact"];
 
@@ -13,26 +11,16 @@ export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section className="relative h-screen md:h-[847px] min-h-[600px] overflow-hidden bg-[#fafafa]">
+    <section className="relative h-screen min-h-[600px] overflow-hidden bg-[#fafafa]">
 
-      {/* ── Desktop photo ──
-          Container: extends 34.79% beyond both sides, aspect-ratio preserves 2291:1346.
-          Center anchored at 50% + 88.84px so the subject sits in the upper half.
-          <img object-bottom> anchors image content to bottom of the container.
-      */}
+      {/* ── Desktop photo ── fills section, anchored to bottom. */}
       <div
         aria-hidden
-        className="hidden md:block absolute -translate-y-1/2 pointer-events-none"
-        style={{
-          aspectRatio: "2291 / 1346",
-          left: "-34.79%",
-          right: "-34.79%",
-          top: "calc(50% + 88.84px)",
-        }}
+        className="hidden md:block absolute inset-0 pointer-events-none"
       >
         <img
           alt=""
-          className="absolute inset-0 max-w-none object-bottom size-full"
+          className="w-full h-full object-cover object-bottom"
           src={DESKTOP_PHOTO}
         />
       </div>
@@ -68,9 +56,10 @@ export default function HeroSection() {
 
       {/* ════════════════════════════════════════
           DESKTOP CONTENT
-          flex-col gap-[270px]: nav at top, hero block 270px below
+          Nav anchored top, hero block anchored 152px from bottom.
+          Flex spacer absorbs any extra viewport height.
       ════════════════════════════════════════ */}
-      <div className="hidden md:flex flex-col gap-[270px] items-center px-[32px] relative z-20 h-full">
+      <div className="hidden md:flex flex-col items-center px-[32px] pb-[152px] relative z-20 h-full">
 
         {/* Nav */}
         <nav className="flex items-center justify-between py-[24px] w-full shrink-0">
@@ -102,6 +91,9 @@ export default function HeroSection() {
           </button>
         </nav>
 
+        {/* Flex spacer — keeps nav at top, hero block 152px from bottom */}
+        <div className="flex-1 min-h-[240px] w-full" />
+
         {/* Hero block */}
         <div className="flex flex-col items-center justify-center shrink-0 w-full">
 
@@ -122,7 +114,7 @@ export default function HeroSection() {
 
           {/* Description + CTA — right-aligned block, 294px wide */}
           <div className="flex flex-col items-end justify-center w-full">
-            <div className="flex flex-col gap-[17px] items-start">
+            <div className="flex flex-col gap-[9px] items-start">
               <p
                 className="font-sans font-bold italic text-[14px] leading-[1.1] text-[#1f1f1f] uppercase w-[294px]"
                 style={{ letterSpacing: "-0.56px" }}

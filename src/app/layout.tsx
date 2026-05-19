@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
@@ -17,6 +17,11 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   style: ["italic"],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "Harvey Specter",

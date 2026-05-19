@@ -1,6 +1,6 @@
-const IMG_1 = "https://www.figma.com/api/mcp/asset/5ebeed7e-f9f4-4470-8126-260a255e87df";
-const IMG_2 = "https://www.figma.com/api/mcp/asset/67360fd0-c7d2-4d63-98a4-b6f034f677d5";
-const IMG_3 = "https://www.figma.com/api/mcp/asset/57640a7f-5bbd-4a53-87c3-03f790360557";
+const IMG_1 = "/images/news-1.png";
+const IMG_2 = "/images/news-2.png";
+const IMG_3 = "/images/news-3.png";
 
 const DESC = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
