@@ -1,5 +1,4 @@
-const PHOTO =
-  "https://www.figma.com/api/mcp/asset/4b515df1-389c-408e-8567-751ee1aeaa1e";
+const PHOTO = "/images/photo-break.png";
 
 export default function PhotoBreak() {
   return (

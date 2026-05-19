@@ -1,7 +1,7 @@
-const LOGO_MARKO = "https://www.figma.com/api/mcp/asset/746882bf-cb9a-4e22-9e15-066fc8e989bc";
-const LOGO_LUKAS  = "https://www.figma.com/api/mcp/asset/2ad9011c-f454-4390-bf92-b2c136afe167";
-const LOGO_SARAH  = "https://www.figma.com/api/mcp/asset/04ff169b-8073-46d6-8c15-99c7e30fc17c";
-const LOGO_SOFIA  = "https://www.figma.com/api/mcp/asset/4943e670-f554-40a5-9d2f-766dc83e0098";
+const LOGO_MARKO = "/images/logo-marko.png";
+const LOGO_LUKAS  = "/images/logo-lukas.png";
+const LOGO_SARAH  = "/images/logo-sarah.png";
+const LOGO_SOFIA  = "/images/logo-sofia.png";
 
 function TestimonialCard({
   logo,
@@ -117,27 +117,29 @@ export default function TestimonialsSection() {
           Testimonials
         </p>
 
-        <div className="flex items-center">
-          {/* First card — slight left overlap on second */}
-          <div className="shrink-0 relative z-10 mr-[-10px]" style={{ transform: "rotate(-3.5deg)" }}>
-            <TestimonialCard
-              logo={LOGO_MARKO}
-              logoW={142.749}
-              logoH={18.97}
-              quote="A brilliant creative partner who transformed our vision into a unique, high-impact brand identity. Their ability to craft everything from custom mascots to polished logos is truly impressive."
-              name="Marko Stojković"
-              cardW={260}
-            />
-          </div>
-          <div className="shrink-0 relative" style={{ transform: "rotate(2deg)" }}>
-            <TestimonialCard
-              logo={LOGO_SOFIA}
-              logoW={81.1}
-              logoH={36.174}
-              quote="An incredibly versatile designer who delivers consistent quality across a wide range of styles and formats."
-              name="Sofia Martínez"
-              cardW={260}
-            />
+        <div className="overflow-x-auto -mx-4 px-4 pb-2">
+          <div className="flex items-center w-max">
+            {/* First card — slight left overlap on second */}
+            <div className="shrink-0 relative z-10 mr-[-10px]" style={{ transform: "rotate(-3.5deg)" }}>
+              <TestimonialCard
+                logo={LOGO_MARKO}
+                logoW={142.749}
+                logoH={18.97}
+                quote="A brilliant creative partner who transformed our vision into a unique, high-impact brand identity. Their ability to craft everything from custom mascots to polished logos is truly impressive."
+                name="Marko Stojković"
+                cardW={260}
+              />
+            </div>
+            <div className="shrink-0 relative" style={{ transform: "rotate(2deg)" }}>
+              <TestimonialCard
+                logo={LOGO_SOFIA}
+                logoW={81.1}
+                logoH={36.174}
+                quote="An incredibly versatile designer who delivers consistent quality across a wide range of styles and formats."
+                name="Sofia Martínez"
+                cardW={260}
+              />
+            </div>
           </div>
         </div>
 

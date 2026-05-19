@@ -3,25 +3,25 @@ const SERVICES = [
     num: "[ 1 ]",
     title: "Brand Discovery",
     desc: "We dig deep into what makes you different — your story, your audience, and your ambition. The result is a clear creative direction and a visual identity that stands out and holds up.",
-    img: "https://www.figma.com/api/mcp/asset/46b76c4f-5f29-476c-9c16-a4bf0d87df64",
+    img: "/images/service-brand.png",
   },
   {
     num: "[ 2 ]",
     title: "Web Design & Dev",
     desc: "High-performance websites built with precision. From concept to deployment, we craft digital experiences that look exceptional and convert — built to be fast, responsive, and memorable.",
-    img: "https://www.figma.com/api/mcp/asset/51eadce2-290c-4c3c-9cf3-d4c52ccc03ae",
+    img: "/images/service-web.png",
   },
   {
     num: "[ 3 ]",
     title: "Marketing",
     desc: "Strategic campaigns and content that cut through noise and drive results. We combine sharp creative with data-informed thinking to get your brand in front of the right people.",
-    img: "https://www.figma.com/api/mcp/asset/a9064ee1-1b22-4405-a3c0-e148e40c4c5b",
+    img: "/images/service-marketing.png",
   },
   {
     num: "[ 4 ]",
     title: "Photography",
     desc: "Compelling imagery that tells your story on sight. From editorial shoots to product photography, every frame is composed with intention and finished to a commercial standard.",
-    img: "https://www.figma.com/api/mcp/asset/7c9c8567-3288-4943-a946-18fb1c4e9c8a",
+    img: "/images/service-photography.png",
   },
 ] as const;
 
